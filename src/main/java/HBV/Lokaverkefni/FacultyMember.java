@@ -6,6 +6,7 @@ public class FacultyMember extends User {
 
     public FacultyMember(String name, String department) {
         super(name);
+        this.department = department;
     }
 
     public String getDepartment() {

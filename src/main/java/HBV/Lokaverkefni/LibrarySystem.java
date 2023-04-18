@@ -21,6 +21,10 @@ public class LibrarySystem {
         books.add(newBook);
     }
 
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
     public void addStudentUser(String name, boolean feePaid) {
         Student newStudent = new Student(name, false);
         users.add(newStudent);

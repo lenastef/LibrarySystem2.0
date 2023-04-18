@@ -16,10 +16,10 @@ public class Main {
         while (true) {
             System.out.println("\nPlease select an option:");
             System.out.println("1. Add a book");
-            System.out.println("2. Add a student user");
-            System.out.println("3. Add a faculty member user");
+            System.out.println("2. Add a student");
+            System.out.println("3. Add a faculty member");
             System.out.println("4. Borrow a book");
-            System.out.println("5. Extend a lending");
+            System.out.println("5. Extend lending");
             System.out.println("6. Return a book");
             System.out.println("7. Quit");
 
@@ -31,10 +31,10 @@ public class Main {
                     addBook();
                     break;
                 case 2:
-                    addStudentUser();
+                    addStudent();
                     break;
                 case 3:
-                    addFacultyMemberUser();
+                    addFacultyMember();
                     break;
                 case 4:
                     borrowBook();
@@ -91,7 +91,7 @@ public class Main {
         System.out.println("\nBook added successfully!");
     }
 
-    private static void addStudentUser() {
+    private static void addStudent() {
         System.out.println("\nEnter the student's name:");
         String name = scanner.nextLine();
 
@@ -102,7 +102,7 @@ public class Main {
         System.out.println("\nStudent added successfully!");
     }
 
-    private static void addFacultyMemberUser() {
+    private static void addFacultyMember() {
         System.out.println("\nEnter the faculty member's name:");
         String name = scanner.nextLine();
 
