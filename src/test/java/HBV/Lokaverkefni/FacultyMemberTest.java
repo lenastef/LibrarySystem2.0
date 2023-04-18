@@ -12,12 +12,12 @@ public class FacultyMemberTest {
 
     @BeforeEach
     public void setUp() {
-        facultyMember = new FacultyMember("John Doe", "Computer Science");
+        facultyMember = new FacultyMember("Helena", "Computer Science");
     }
 
     @Test
     public void testGetName() {
-        assertEquals("John Doe", facultyMember.getName());
+        assertEquals("Helena", facultyMember.getName());
     }
 
     @Test
