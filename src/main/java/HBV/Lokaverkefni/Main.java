@@ -24,7 +24,7 @@ public class Main {
             System.out.println("7. Quit");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // consume the newline character
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -40,7 +40,6 @@ public class Main {
                     borrowBook();
                     break;
                 case 5:
-                    // Get user input for student name, book title, and new due date
                     System.out.print("Enter student name: ");
                     String studentName = scanner.nextLine();
                     System.out.print("Enter book title: ");
@@ -48,25 +47,19 @@ public class Main {
                     System.out.print("Enter new due date (yyyy-mm-dd): ");
                     LocalDate newDueDate = LocalDate.parse(scanner.nextLine());
 
-                    // Find the student and book objects using the library system
                     Student student = (Student) librarySystem.findUserByName(studentName);
                     Book book = librarySystem.findBookByTitle(bookTitle);
 
-                    // Call the extendLending() method with the required parameters
                     librarySystem.extendLending(student, book, newDueDate);
                     break;
                 case 6:
-                    // Get user input for user name and book title
                     System.out.print("Enter user name: ");
                     String userName = scanner.nextLine();
                     System.out.print("Enter book title: ");
                     bookTitle = scanner.nextLine();
 
-                    // Find the user and book objects using the library system
                     User user = librarySystem.findUserByName(userName);
                     book = librarySystem.findBookByTitle(bookTitle);
-
-                    // Call the returnBook() method with the required parameters
                     librarySystem.returnBook(user, book);
                     break;
 
