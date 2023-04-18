@@ -7,11 +7,36 @@
     <groupId>org.example</groupId>
     <artifactId>LibrarySystem2.0</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <name>LibrarySystem2.0</name>
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <organization>
+        <name>University of Iceland</name>
+        <url>https://www.hi.is</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>LibrarySystem2.0</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+
+    <scm>
+        <connection>scm:git:git://github.com/UniversityOfIceland/LibrarySystem2.0.git</connection>
+        <developerConnection>scm:git:git://github.com/UniversityOfIceland/LibrarySystem2.0.git</developerConnection>
+        <url>https://github.com/UniversityOfIceland/LibrarySystem2.0</url>
+    </scm>
 </project>
