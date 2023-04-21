@@ -16,14 +16,19 @@ public class LibrarySystem {
         lendings = new ArrayList<>();
     }
 
-    public void addBookWithTitleAndAuthorlist(String title, List<Author> authors) {
+    public Book addBookWithTitleAndAuthorlist(String title, List<Author> authors) {
         Book newBook = new Book(title, authors, 0);
         books.add(newBook);
+        return newBook;
 
     }
 
     public void addBook(Book book) {
         books.add(book);
+    }
+
+    public List getAllBooks() {
+        return books;
     }
 
     public void addStudentUser(String name, boolean feePaid) {

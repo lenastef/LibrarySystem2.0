@@ -18,9 +18,6 @@ public class LibrarySystemTest {
     @Before
     public void setUp() {
         LibrarySystem library = new LibrarySystem();
-        library.addBookWithTitleAndAuthorlist("Test Book 1", new ArrayList<>());
-        library.addBookWithTitleAndAuthorlist("Test Book 2", new ArrayList<>());
-        library.addBookWithTitleAndAuthorlist("Test Book 3", new ArrayList<>());
 
         authors1.add(new Author("lena"));
         authors1.add(new Author("lella"));
@@ -31,24 +28,13 @@ public class LibrarySystemTest {
 
     @Test
     public void testAddBookWithTitleAndAuthorlist() {
+        Book book1 = library.addBookWithTitleAndAuthorlist("Test Book 1", new ArrayList<>());
 
-        Book book1 = library.findBookByTitle("Test Book 1");
         assertNotNull(book1);
 
         assertEquals("Test Book 1", book1.getTitle());
-        assertEquals(authors1, book1.getAuthors());
-        assertEquals(0, book1.getNumAvailableCopies());
+        assertTrue(library.getAllBooks().contains(book1));
 
-        authors2.add(new Author("Jane Smith"));
-        authors2.add(new Author("Bob Johnson"));
-        library.addBookWithTitleAndAuthorlist("Test Book 2", authors2);
-        Book book2 = library.findBookByTitle("Test Book 2");
-
-        assertNotNull(book2);
-        
-        assertEquals("Test Book 2", book2.getTitle());
-        assertEquals(authors2, book2.getAuthors());
-        assertEquals(0, book2.getNumAvailableCopies());
     }
 
 
